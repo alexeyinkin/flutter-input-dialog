@@ -1,0 +1,10 @@
+/.idea
+
+.dart_tool
+build
+
+/pubspec.lock
+
+# Additional to .gitignore
+
+/doc/images
