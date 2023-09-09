@@ -62,7 +62,7 @@ class _MyHomePageState extends State<MyHomePage> {
         onPressed: _prompt,
         tooltip: 'Show input_dialog',
         child: const Icon(Icons.open_in_new),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      ),
     );
   }
 }

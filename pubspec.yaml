@@ -1,6 +1,6 @@
 name: 'input_dialog'
 description: 'The easiest way to prompt a user for text, good for prototyping'
-version: 0.1.0
+version: 0.1.1
 repository: 'https://github.com/alexeyinkin/flutter-input-dialog'
 
 environment:

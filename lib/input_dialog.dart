@@ -1,8 +1,9 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
-const _defaultOkText = 'OK';
 const _defaultCancelText = 'Cancel';
+const _defaultOkText = 'OK';
+const _defaultTitle = 'Enter Text';
 
 /// A widget to prompt user for a string.
 class InputDialog extends StatefulWidget {
@@ -18,17 +19,17 @@ class InputDialog extends StatefulWidget {
   ///
   const InputDialog({
     super.key,
-    required this.title,
     this.cancelText = _defaultCancelText,
     this.okText = _defaultOkText,
+    this.title = _defaultTitle,
   });
 
   /// Shows the dialog and returns the input string or `null` on cancel.
   static Future<String?> show({
     required BuildContext context,
-    required String title,
     String cancelText = _defaultCancelText,
     String okText = _defaultOkText,
+    String title = _defaultTitle,
   }) async {
     return showDialog(
       context: context,
@@ -83,5 +84,11 @@ class _InputDialogState extends State<InputDialog> {
 
   void _ok() {
     Navigator.pop(context, _controller.text);
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
   }
 }
